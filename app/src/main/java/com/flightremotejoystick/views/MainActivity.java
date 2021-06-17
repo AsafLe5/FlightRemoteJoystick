@@ -2,10 +2,12 @@ package com.flightremotejoystick.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.flightremotejoystick.R;
 import com.flightremotejoystick.databinding.ActivityMainBinding;
@@ -25,18 +27,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Get IP from edit text
-                String ip = binding.ipText.getText().toString().trim();
+                String ipString = binding.ipText.getText().toString().trim();
                 //Check condition
-                if(!ip.equals("")){
+                if(!ipString.equals("")){
                     //When text is not empty
                     //Set text on text view
-                    binding.tvOutput.setText(ip);
+                    binding.tvOutput.setText(ipString);
                 }
                 else{
-                    //When text is empty - display t
+                    //When text is empty
+                    Toast.makeText(v.getContext()
+                            ,"please enter text!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
+        //initiallize fragment
+        Fragment fragment = new MainFragment();
+        //Commit fragment.
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
         setContentView(R.layout.activity_main);
     }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:context=".views.MainFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Binding\nFor fragment"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary_dark" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_input"
+            android:hint="Enter Text"
+            android:padding="16dp"
+            android:background="@android:drawable/editbox_background" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_submit"
+            android:text="submit"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvOutput"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</layout>
