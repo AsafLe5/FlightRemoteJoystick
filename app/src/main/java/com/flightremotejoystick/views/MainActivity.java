@@ -38,16 +38,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     //When text is empty
-                    Toast.makeText(v.getContext()
+                    Toast.makeText(getApplicationContext()
                             ,"please enter text!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
         //initialize fragment
         Fragment fragment = new MainFragment();
         //Commit fragment.
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment,fragment).commit();
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
     }
 }

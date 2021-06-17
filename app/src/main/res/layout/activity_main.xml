@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textColor="@color/black"
             android:padding="12dp"
             android:hint="Enter IP Address"
             android:background="@android:drawable/editbox_background" />
@@ -26,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:padding="12dp"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:hint="Enter Port Number"
             android:background="@android:drawable/editbox_background" />
