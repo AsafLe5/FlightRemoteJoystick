@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         //Assign variable
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
-        binding.connectButton.setOnClickListener(new View.OnClickListener() {
+
+        //findViewById(R.id.bt_connect).setOnClickListener(new View.OnClickListener(){
+        binding.btConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Get IP from edit text
@@ -41,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        //initiallize fragment
+        //initialize fragment
         Fragment fragment = new MainFragment();
         //Commit fragment.
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment,fragment).commit();
         setContentView(R.layout.activity_main);
     }
 }

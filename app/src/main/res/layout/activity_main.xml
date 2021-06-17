@@ -6,49 +6,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".views.MainActivity">
+        tools:context=".views.MainActivity"
+        android:orientation="vertical">
 
         <EditText
-            android:id="@+id/ipText"
+            android:id="@+id/ip_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:padding="12dp"
             android:hint="Enter IP Address"
-            android:layout_gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:background="@android:drawable/editbox_background" />
+
 
         <EditText
             android:id="@+id/portText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:padding="12dp"
             android:layout_gravity="center"
             android:hint="Enter Port Number"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:background="@android:drawable/editbox_background" />
 
         <Button
-            android:id="@+id/connectButton"
+            android:id="@+id/bt_connect"
             android:layout_width="290dp"
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
             android:text="Connect"
-            android:layout_gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_gravity="center" />
 
         <SeekBar
             android:id="@+id/rudderSeekBar"
@@ -77,13 +65,13 @@
             android:textSize="32sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="8dp" />
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/fragment"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp" />
 
     </LinearLayout>
 </layout>
