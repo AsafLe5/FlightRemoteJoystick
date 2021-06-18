@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.flightremotejoystick.R;
 import com.flightremotejoystick.databinding.FragmentMainBinding;
 
+import io.github.controlwear.virtual.joystick.android.JoystickView;
+
 /**
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
@@ -34,24 +36,33 @@ public class MainFragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_main,container,false);
         view = binding.getRoot();
 
-        binding.btSubmit.setOnClickListener(new View.OnClickListener() {
+        JoystickView joystick = (JoystickView) binding.btJoystick;
+                //findViewById(R.id.joystickView);
+        joystick.setOnMoveListener(new JoystickView.OnMoveListener() {
             @Override
-            public void onClick(View view) {
-                //get text from edit text
-                String sText = binding.etInput.getText().toString().trim();
-                //check condition
-                if(!sText.equals("")){
-                    //When text is not empty
-                    //Set text on text view
-                    binding.tvOutput.setText(sText);
-                }else{
-                    //When text is empty
-                    //Display toast
-                    Toast.makeText(view.getContext()
-                            ,"Please enter text",Toast.LENGTH_SHORT).show();
-                }
+            public void onMove(int angle, int strength) {
+                // do whatever you want
             }
         });
+
+//        binding.btSubmit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //get text from edit text
+//                String sText = binding.etInput.getText().toString().trim();
+//                //check condition
+//                if(!sText.equals("")){
+//                    //When text is not empty
+//                    //Set text on text view
+//                    binding.tvOutput.setText(sText);
+//                }else{
+//                    //When text is empty
+//                    //Display toast
+//                    Toast.makeText(view.getContext()
+//                            ,"Please enter text",Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
 
         //return view
         return view;
