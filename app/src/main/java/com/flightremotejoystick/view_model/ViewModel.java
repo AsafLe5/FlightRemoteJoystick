@@ -19,12 +19,6 @@ public class ViewModel{ //extends AndroidViewModel {
     private String ip;
     private int port;
 
-    private float aileron;
-    private float elevator;
-
-    private float throttle;
-    private float rudder;
-
     public void initializeModel(String ip, int port) throws IOException {
         this.ip = ip;
         this.port = port;
@@ -37,23 +31,19 @@ public class ViewModel{ //extends AndroidViewModel {
     }
 
     public void setAileron(float aileron) {
-        this.aileron = aileron;
         this.model.setAileron(aileron);
     }
 
     public void setElevator(float elevator) {
-        this.elevator = elevator;
         this.model.setElevator(elevator);
         //TODO: call a function in main for sending to server.
     }
 
     public void setThrottle(float throttle) {
-        this.throttle = throttle;
         this.model.setThrottle(throttle);
     }
 
     public void setRudder(float rudder) {
-        this.rudder = rudder;
         this.model.setRudder(rudder);
     }
 }

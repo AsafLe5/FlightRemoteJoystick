@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    binding.tvOutput.setText(portIp);
+                    //binding.tvOutput.setText(portIp);
                 }
                 else{
                     //When text is empty
@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 }else
                     rudder = (float)(rudder-0.5)*2;
                 viewModel.setRudder(rudder);
-                String sRudder = String.valueOf(rudder);
-                binding.textiView.setText(sRudder);
+                //String sRudder = String.valueOf(rudder);
+                //binding.textiView.setText(sRudder);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -90,19 +90,16 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 int start = binding.throttleSeekBar.getMax();
                 float throttle = (float)(progress)/(float)start;
-                if (throttle<0.5){
-                    throttle = (float)(throttle-0.5)*2;
-                }else
-                    throttle = (float)(throttle-0.5)*2;
-                viewModel.setRudder(throttle);
-                String sThrottle = String.valueOf(throttle);
-                binding.textiView.setText(sThrottle);
+                viewModel.setThrottle(throttle);
+                //String sThrottle = String.valueOf(throttle);
+                //binding.textiView.setText(sThrottle);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
+
         //initialize fragment
         Fragment fragment;
         fragment = new Joystick(this.viewModel);
