@@ -122,9 +122,6 @@
                     android:id="@+id/throttleSeekBar"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-
-
-                    android:progress="0"
                     android:splitTrack="false"
                     app:seekBarRotation="CW270"
                     /> <!-- Rotation: CW90 or CW270 -->

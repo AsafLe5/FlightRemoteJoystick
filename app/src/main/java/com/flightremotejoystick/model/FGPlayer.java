@@ -84,7 +84,7 @@ public class FGPlayer {
         Thread thread = new Thread() {
             public void run() {
                 try {
-                    out.print("set /controls/flight/current-engine/throttle "+throttle+"\r\n");
+                    out.print("set /controls/engines/current-engine/throttle "+throttle+"\r\n");
                     out.flush();
                 } catch (Exception e) {
                     e.printStackTrace();
