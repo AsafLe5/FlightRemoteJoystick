@@ -20,6 +20,7 @@
             android:layout_marginTop="20dp"
             android:background="@android:drawable/editbox_background"
             android:hint="Enter IP Address"
+            android:textColorHint="@android:color/darker_gray"
             android:padding="12dp"
             android:textColor="@color/black" />
 
@@ -32,6 +33,7 @@
             android:layout_marginTop="20dp"
             android:background="@android:drawable/editbox_background"
             android:hint="Enter Port Number"
+            android:textColorHint="@android:color/darker_gray"
             android:padding="12dp"
             android:textColor="@color/black" />
 
@@ -99,7 +101,8 @@
                 android:layout_width="wrap_content"
                 android:textAlignment="center"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                tools:ignore="MissingConstraints" />
 
             <!--<SeekBar
                 android:id="@+id/throttleSeekBar"

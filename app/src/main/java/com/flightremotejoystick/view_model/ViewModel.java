@@ -16,12 +16,7 @@ public class ViewModel{ //extends AndroidViewModel {
 
     private FGPlayer model;
 
-    private String ip;
-    private int port;
-
     public void initializeModel(String ip, int port) throws IOException {
-        this.ip = ip;
-        this.port = port;
         this.model.initialize(ip,port);
     }
 

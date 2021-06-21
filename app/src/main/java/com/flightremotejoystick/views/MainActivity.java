@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                 //Check condition
                 if(!ipString.equals("") && !portString.equals("")){
                     //When text is not empty - Set text on text view.
-                    String portIp = ipString + "\n" + portString;
                     try {
                         viewModel.initializeModel(ipString,Integer.parseInt(portString));
                     } catch (IOException e) {
