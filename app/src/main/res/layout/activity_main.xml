@@ -13,7 +13,7 @@
         tools:context=".views.MainActivity">
 
         <ImageView
-            android:layout_width="80dp"
+            android:layout_width="85dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/title"/>
