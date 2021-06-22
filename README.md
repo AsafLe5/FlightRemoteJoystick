@@ -1,20 +1,21 @@
-# Android App Remote Control Joystick
+# Android App - FlightRemoteJoystick
+**Preview from FlightRemoteJoystick
+
 Our application is a simple joystick control application. The application connect to the flightGear using the device ip, and the flightGear port. After the connection, the user can flight an airplane by himself, using the joystick and the seekBars on the screen.
 
-**App features:**
+# App features
 * **Enter your IP and PORT (6400).**
 * **Press on connect button in order to connect flightGear and use our application.**
 * **Use the joystick if you want to change the value of "aileron" or "elevator".**
 * **Use the seekBars if you want to change the value of "rudder" or "throttle"**
 * **Press on disconnect button if you want to disconnect from the flightGear.**
 
-**App content:**
-
+# Directory hierarchy
 We organized our code in the design pattern of MVVM. These are the folders we created:
 
-* **viewModel - responsible to connect between the view and the model.**
-* **model - responsible for connect to flightGear and send requests to it.**
-* **view - responsible for showing the joystick and the seekBars to the screen.**
+* viewModel - responsible to connect between the view and the model.
+* model - responsible for connect to flightGear and send requests to it.
+* view - responsible for showing the joystick and the seekBars to the screen.
 **viewModel**
 
 ViewModel.java - this class connect between the view and the model.
@@ -29,7 +30,7 @@ Joystick.java - responsible for joystick's view.
 
 MainActivity.java - this class get all data from the view and send it to viewModel, and ViewModel.java send it to Model.java.
 
-**Instructions for using the application:**
+# Instructions for using the application
 
 * Download 'FlightGear' 2020.3.6 application here.
 * Open this application.
@@ -48,7 +49,7 @@ Android App Remote Control Joystick - Explenation Video
 
 Watch here **WE NEED TO ADD VIDEO**
 
-**Authors:**
+# Authors
 
 * **Ilan Bitan**
 
