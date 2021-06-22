@@ -46,7 +46,7 @@ MainActivity.java - this class get all data from the view and send it to viewMod
 * Go to the extracted folder.
 * Double click on the ‘Android-App-Remote-Control-Joystick’ with the android icon next to it, and then press ‘ok’.
 * Now, enter your computer IP and PORT 6400 and click "connect". If the connection failed, check your flightGear. If the connection success, you can control the airplane by the joystick and by the seekBars. Enjoy :)
-* 
+ 
 Android App Remote Control Joystick - Explantation Video
 
 Watch here **WE NEED TO ADD VIDEO**
