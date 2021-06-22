@@ -27,10 +27,21 @@ public class Joystick extends Fragment {
     private View view;
     private ViewModel viewModel;
 
+    /**
+     * constructor
+     * @param viewModel set ViewModel
+     */
     public Joystick(ViewModel viewModel) {
         this.viewModel = viewModel;
     }
 
+    /**
+     * creating the view of joystick
+     * @param inflater It is an LayoutInflater type parameter
+     * @param container It is an ViewGroup type parameter
+     * @param savedInstanceState It is an Bundle type parameter
+     * @return view
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,27 +60,6 @@ public class Joystick extends Fragment {
                 viewModel.setElevator((float)(strength*Math.sin(angle)));
             }
         });
-
-//        binding.btSubmit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //get text from edit text
-//                String sText = binding.etInput.getText().toString().trim();
-//                //check condition
-//                if(!sText.equals("")){
-//                    //When text is not empty
-//                    //Set text on text view
-//                    binding.tvOutput.setText(sText);
-//                }else{
-//                    //When text is empty
-//                    //Display toast
-//                    Toast.makeText(view.getContext()
-//                            ,"Please enter text",Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-
-        //return view
         return view;
     }
 }

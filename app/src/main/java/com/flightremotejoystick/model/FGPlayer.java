@@ -5,6 +5,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.SocketException;
 
+/**
+ * The flight-gear model
+ */
 public class FGPlayer {
 
     private String ip;
@@ -13,31 +16,40 @@ public class FGPlayer {
     private Socket fg;
     private PrintWriter out;
 
+    /**
+     * initialize the connection
+     * @param ip string - computer ip
+     * @param port int parameter
+     * @throws IOException if failed
+     */
     public void initialize(String ip, int port) throws IOException {
         this.ip = ip;
         this.port = port;
         connect();
     }
 
-    public Boolean connect() throws IOException {
+    /**
+     * connect and run the program
+     * @throws IOException if failed
+     */
+    public void connect() throws IOException {
         Thread thread = new Thread() {
             public void run() {
                 try {
                     fg = new Socket(ip,port);
-                    //fg = new Socket("10.0.0.10", 6400);
                     out = new PrintWriter(fg.getOutputStream(), true);
-//                    out.print("set /controls/flight/rudder "+1+"\r\n");
-//                    out.flush();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
         };
         thread.start();
-        return true;
     }
 
+    /**
+     * function that set the aileron of the airplane
+     * @param aileron float number from -1 to 1
+     */
     public void setAileron(float aileron) {
         Thread thread = new Thread() {
             public void run() {
@@ -52,6 +64,10 @@ public class FGPlayer {
         thread.start();
     }
 
+    /**
+     * function that set the elevator of the airplane
+     * @param elevator float number from -1 to 1
+     */
     public void setElevator(float elevator) {
         Thread thread = new Thread() {
             public void run() {
@@ -66,6 +82,10 @@ public class FGPlayer {
         thread.start();
     }
 
+    /**
+     * function that set the elevator of the airplane
+     * @param rudder float number from -1 to 1
+     */
     public void setRudder(float rudder) {
         Thread thread = new Thread() {
             public void run() {
@@ -80,6 +100,10 @@ public class FGPlayer {
         thread.start();
     }
 
+    /**
+     * function that set the throttle of the airplane
+     * @param throttle float number from -1 to 1
+     */
     public void setThrottle(float throttle) {
         Thread thread = new Thread() {
             public void run() {
@@ -93,8 +117,4 @@ public class FGPlayer {
         };
         thread.start();
     }
-
-
-
-
 }

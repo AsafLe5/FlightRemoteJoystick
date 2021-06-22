@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,8 +22,6 @@
             custom:JV_buttonImage="@drawable/pngegg"
             custom:JV_borderWidth="4dp"
             custom:JV_fixedCenter="false"/>
-
-
 
     </LinearLayout>
 </layout>
