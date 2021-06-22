@@ -16,6 +16,7 @@ We organized our code in the design pattern of MVVM. These are the folders we cr
 * viewModel - responsible to connect between the view and the model.
 * model - responsible for connect to flightGear and send requests to it.
 * view - responsible for showing the joystick and the seekBars to the screen.
+
 **viewModel**
 
 ViewModel.java - this class connect between the view and the model.
