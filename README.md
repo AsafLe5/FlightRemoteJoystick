@@ -33,12 +33,12 @@ MainActivity.java - this class get all data from the view and send it to viewMod
 
 # Instructions for using the application
 
-* Download 'FlightGear' 2020.3.6 application here.
+* Download 'FlightGear' 2020.3.6 application [here](https://www.flightgear.org/download/).
 * Open this application.
 * Go to settings in the FlightGear application you opened and write under Additional Settings this line: --telnet=socket,in,10,127.0.0.1,6400,tcp
 * Press the button Fly in FlightGear. You can press on 'v' in your keyboard to get another angle of the airplane.
-* Download android studio version 4.2.1 (latest version). Download here
-* Create an Android virtual device (emulator). Click here for set up guild
+* Download android studio version 4.2.1 (latest version). [Download here](https://developer.android.com/studio)
+* Create an Android virtual device (emulator). [Click here for set up guild ](https://developer.android.com/codelabs/kotlin-android-training-get-started?index=..%2F..android-kotlin-fundamentals#5)
 * Download the repo as zip.
 * Extract the folder.
 * Enter ‘Android Studio’.
