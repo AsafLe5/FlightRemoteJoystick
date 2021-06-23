@@ -51,6 +51,9 @@ Android App Remote Control Joystick - Explantation Video
 
 Watch here **WE NEED TO ADD VIDEO**
 
+# UML Diagram
+click [here](https://github.com/AsafLe5/FlightRemoteJoystick/blob/master/app/src/umlDiagram.jpeg) to see our UML Diagram
+
 # Authors
 
 * **Ilan Bitan**
