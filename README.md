@@ -1,5 +1,6 @@
 # Android App - FlightRemoteJoystick
 **Preview from FlightRemoteJoystick**
+![image](https://user-images.githubusercontent.com/62257681/123125450-31549b80-d451-11eb-88c2-6b4153a24399.png)
 
 Our application is a simple joystick control application. The application connect to the flightGear using the device ip, and the flightGear port. After the connection, the user can flight an airplane by himself, using the joystick and the seekBars on the screen.
 
@@ -32,6 +33,7 @@ Joystick.java - responsible for joystick's view.
 MainActivity.java - this class get all data from the view and send it to viewModel, and ViewModel.java send it to Model.java.
 
 # Instructions for using the application
+![image](https://user-images.githubusercontent.com/62257681/123125168-f3f00e00-d450-11eb-87ba-33dedd360191.png)
 
 * Download 'FlightGear' 2020.3.6 application [here](https://www.flightgear.org/download/).
 * Open this application.
@@ -46,10 +48,12 @@ MainActivity.java - this class get all data from the view and send it to viewMod
 * Go to the extracted folder.
 * Double click on the ‘Android-App-Remote-Control-Joystick’ with the android icon next to it, and then press ‘ok’.
 * Now, enter your computer IP and PORT 6400 and click "connect". If the connection failed, check your flightGear. If the connection success, you can control the airplane by the joystick and by the seekBars. Enjoy :)
- 
+ ![WhatsApp Image 2021-06-23 at 03 48 52](https://user-images.githubusercontent.com/62257681/123125643-5b0dc280-d451-11eb-89bd-6b9b522b19f6.jpeg)
+
 Android App Remote Control Joystick - Explantation Video
 
-Watch here **WE NEED TO ADD VIDEO**
+Watch [here](https://youtu.be/Iaki4maHlIs)
+![Uploading WhatsApp Image 2021-06-23 at 03.48.52.jpeg…]()
 
 # UML Diagram
 click [here](https://github.com/AsafLe5/FlightRemoteJoystick/blob/master/app/src/umlDiagram.jpeg) to see our UML Diagram
