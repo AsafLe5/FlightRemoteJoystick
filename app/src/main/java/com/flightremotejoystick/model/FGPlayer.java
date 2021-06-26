@@ -24,7 +24,7 @@ public class FGPlayer {
             public void run() {
                 try {
                     //fg = new Socket(ip,port);
-                    fg = new Socket("10.0.0.10", 6400);
+                    fg = new Socket("192.168.1.12", 6400);
                     out = new PrintWriter(fg.getOutputStream(), true);
 //                    out.print("set /controls/flight/rudder "+1+"\r\n");
 //                    out.flush();
