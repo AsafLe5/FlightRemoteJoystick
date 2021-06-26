@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -17,31 +19,39 @@ import com.flightremotejoystick.view_model.ViewModel;
 
 import java.io.IOException;
 
-
+/**
+ * MainActivity class
+ */
 public class MainActivity extends AppCompatActivity {
-    //Initialize Binding.
 
+    //Initialize Binding.
     private FGPlayer model;
     private ViewModel viewModel;
-
-
-
-
-
-
     ActivityMainBinding binding;
 
+    /**
+     * create the main activity
+     * @param savedInstanceState It is an Bundle type parameter
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
             model = new FGPlayer();
             viewModel = new ViewModel(model);
-            //fragment = new Joystick(viewModel);
 
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide(); // this line hides the action bar
+
         //Assign variable
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         binding.btConnect.setOnClickListener(new View.OnClickListener() {
+            /**
+             * binding when pressing the screen
+             * @param v View parameter
+             */
             @Override
             public void onClick(View v) {
                 //Get IP from edit text
@@ -50,13 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 //Check condition
                 if(!ipString.equals("") && !portString.equals("")){
                     //When text is not empty - Set text on text view.
-                    String portIp = ipString + "\n" + portString;
                     try {
                         viewModel.initializeModel(ipString,Integer.parseInt(portString));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    //binding.tvOutput.setText(portIp);
                 }
                 else{
                     //When text is empty
@@ -67,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.rudderSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            /**
+             * change the placement of sliders
+             * @param seekBar It is an Bundle type parameter
+             * @param progress int parameter
+             * @param b boolean parameter
+             */
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 int start = binding.rudderSeekBar.getMax();
@@ -76,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 }else
                     rudder = (float)(rudder-0.5)*2;
                 viewModel.setRudder(rudder);
-                //String sRudder = String.valueOf(rudder);
-                //binding.textiView.setText(sRudder);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -86,38 +98,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.throttleSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            /**
+             * change the placement of sliders
+             * @param seekBar It is an Bundle type parameter
+             * @param progress int parameter
+             * @param b boolean parameter
+             */
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 int start = binding.throttleSeekBar.getMax();
                 float throttle = (float)(progress)/(float)start;
                 viewModel.setThrottle(throttle);
-                //String sThrottle = String.valueOf(throttle);
-                //binding.textiView.setText(sThrottle);
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
-
         //initialize fragment
         Fragment fragment;
         fragment = new Joystick(this.viewModel);
         //Commit fragment.
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment,fragment).commit();
-
-
-
-
-        //Joystick
-        //Fragment joystick = new Joystick();
-       // getSupportFragmentManager().beginTransaction()
-         //       .replace(R.id.bt_joystick,joystick).commit();
-
-
-
-
-        //setContentView(R.layout.activity_main); not goodie good:)
     }
 }

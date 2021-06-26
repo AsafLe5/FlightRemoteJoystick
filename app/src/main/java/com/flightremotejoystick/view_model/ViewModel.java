@@ -11,38 +11,59 @@ import com.flightremotejoystick.model.FGPlayer;
 import java.io.IOException;
 import java.net.Socket;
 
-
-public class ViewModel{ //extends AndroidViewModel {
+/**
+ * ViewModel class
+ */
+public class ViewModel{
 
     private FGPlayer model;
 
-    private String ip;
-    private int port;
-
+    /**
+     *  initialize the model connection
+     * @param ip string - computer ip
+     * @param port int parameter
+     * @throws IOException if failed
+     */
     public void initializeModel(String ip, int port) throws IOException {
-        this.ip = ip;
-        this.port = port;
         this.model.initialize(ip,port);
     }
 
-
+    /**
+     * constructor
+     * @param model FGPlayer
+     */
     public ViewModel(FGPlayer model){
          this.model = model;
     }
 
+    /**
+     * set aileron
+     * @param aileron float number
+     */
     public void setAileron(float aileron) {
         this.model.setAileron(aileron);
     }
 
+    /**
+     * set elevator
+     * @param elevator float number
+     */
     public void setElevator(float elevator) {
         this.model.setElevator(elevator);
-        //TODO: call a function in main for sending to server.
     }
 
+    /**
+     * set throttle
+     * @param throttle float number
+     */
     public void setThrottle(float throttle) {
         this.model.setThrottle(throttle);
     }
 
+    /**
+     * set rudder
+     * @param rudder float number
+     */
     public void setRudder(float rudder) {
         this.model.setRudder(rudder);
     }

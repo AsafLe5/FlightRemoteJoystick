@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,14 +15,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bt_joystick"
-            custom:JV_buttonColor="#FF1240"
-            custom:JV_buttonSizeRatio="30%"
+            custom:JV_buttonColor="#a2a0a3"
+            custom:JV_buttonSizeRatio="40%"
             custom:JV_borderColor="#7B68EE"
             custom:JV_backgroundColor="#7B22FE"
+            custom:JV_buttonImage="@drawable/pngegg"
             custom:JV_borderWidth="4dp"
             custom:JV_fixedCenter="false"/>
-
-
 
     </LinearLayout>
 </layout>
