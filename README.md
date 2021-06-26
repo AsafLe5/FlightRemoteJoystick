@@ -33,9 +33,10 @@ Joystick.java - responsible for joystick's view.
 
 MainActivity.java - this class get all data from the view and send it to viewModel, and ViewModel.java send it to Model.java.
 
-# Instructions for using the application
+# Instructions
 
-![image](https://user-images.githubusercontent.com/62257681/123125168-f3f00e00-d450-11eb-87ba-33dedd360191.png)
+![image](https://user-images.githubusercontent.com/56509308/123511658-34d36700-d68b-11eb-9a96-ab2168d47ca1.png)
+
 
 * Download 'FlightGear' 2020.3.6 application [here](https://www.flightgear.org/download/).
 * Open this application.
